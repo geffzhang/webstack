@@ -1,5 +1,7 @@
 using System;
+using System.Collections.Generic;
 using System.Globalization;
+using System.Linq;
 using System.Threading;
 using NUnit.Framework;
 
@@ -384,5 +386,23 @@ namespace money.Tests
                                                                 Console.WriteLine(total);
                                                             });
         }
+
+        [Test]
+        public void Can_sum()
+        {
+            var monies = new List<Money>();
+            for (var i = 0; i < 10; i++)
+            {
+                monies.Add(new Money(1.45m));
+            }
+            var value = new Money(0);
+            foreach (var money in monies)
+            {
+                value += money;
+            }
+
+            Console.WriteLine(value.ToString()); // Outputs 14, but is actually stored internally as $14.50
+        }
+
     }
 }
