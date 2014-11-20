@@ -27,7 +27,7 @@ namespace cohort.API.Handlers
                         response.Headers.Add("Connection", "close");
                         response.Headers.Add("Location", request.RequestUri.ToString().Replace("http://", "https://"));
                         return response;
-                    });
+                    }, cancellationToken);
                 }
             }
             return base.SendAsync(request, cancellationToken);

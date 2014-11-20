@@ -36,7 +36,7 @@ namespace cohort.API.Handlers
                     {
                         var response = request.CreateResponse(HttpStatusCode.NotAcceptable, Errors.MediaTypeNotSupported.ToHttpError(_acceptedMedia));
                         return response;
-                    });
+                    }, cancellationToken);
                 }
             }
             return base.SendAsync(request, cancellationToken);
