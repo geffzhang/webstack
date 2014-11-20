@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Web;
 using System.Web.Mvc;
 
@@ -12,7 +11,7 @@ namespace depot.Mvc
         public IDictionary<string, object> LoadTempData(ControllerContext controllerContext)
         {
             var cacheKey = GetUserScopedKeyFor(CacheKey, controllerContext.HttpContext);
-            var tempData = controllerContext.HttpContext.Cache[cacheKey] as Dictionary<string, object>;
+            var tempData = Depot.ObjectCache.Get<IDictionary<string, object>>(cacheKey);
 
             if (tempData == null) return new Dictionary<string, object>();
             Depot.ObjectCache.Remove<IDictionary<string, object>>(CacheKey);
