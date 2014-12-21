@@ -68,12 +68,6 @@
   <ItemGroup>
     <Compile Include="TuxedoExtensions.Delete.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\tuxedo\tuxedo.csproj">
-      <Project>{3101d29e-5d73-4b43-afe9-7e682c78959d}</Project>
-      <Name>tuxedo</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

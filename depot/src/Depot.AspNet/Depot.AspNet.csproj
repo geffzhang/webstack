@@ -44,12 +44,6 @@
     <Compile Include="AspNetFileCacheDependency.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Depot\Depot.csproj">
-      <Project>{59A2E720-8F65-43F6-867A-41566A6A0182}</Project>
-      <Name>Depot</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
